@@ -1,0 +1,38 @@
+========================================
+COPY THESE ENTRIES TO YOUR Info.plist
+========================================
+
+Add these two entries to your Info.plist file:
+
+Method 1: Raw XML (if editing Info.plist as source code)
+---------------------------------------------------------
+<key>NSHealthShareUsageDescription</key>
+<string>Kura needs access to your workout and activity data to calculate calories burned and show your net calorie balance.</string>
+
+<key>NSHealthUpdateUsageDescription</key>
+<string>Kura may write nutrition data to Apple Health in the future.</string>
+
+
+Method 2: Property List Editor (if using Xcode's GUI)
+------------------------------------------------------
+Key: NSHealthShareUsageDescription
+Type: String
+Value: Kura needs access to your workout and activity data to calculate calories burned and show your net calorie balance.
+
+Key: NSHealthUpdateUsageDescription  
+Type: String
+Value: Kura may write nutrition data to Apple Health in the future.
+
+
+QUICK SETUP CHECKLIST:
+----------------------
+☐ 1. In Xcode, select your app target
+☐ 2. Go to "Signing & Capabilities" tab
+☐ 3. Click "+ Capability" and add "HealthKit"
+☐ 4. Add the two entries above to Info.plist
+☐ 5. Build and run on a REAL device (not simulator)
+☐ 6. Go to Profile → Apple Health in the app
+☐ 7. Tap "Connect Apple Health"
+☐ 8. Grant permissions in the iOS dialog
+
+REMEMBER: HealthKit only works on real devices, NOT in the simulator!

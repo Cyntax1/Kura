@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Kura uses your camera to scan and identify food items for accurate nutrition tracking and calorie logging. This helps you maintain your fasting and dieting goals by automatically recognizing meals.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Kura needs access to your workout and activity data to calculate calories burned and show your net calorie balance. This helps you track your complete nutrition picture by showing calories consumed minus calories burned from exercise.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Kura may write nutrition data to Apple Health in the future to keep all your health data synchronized in one place.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kura</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>com.kura.oauth</string>
+		</dict>
+	</array>
+</dict>
+</plist>

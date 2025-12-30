@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0930D6C22E43E54500B3BFC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0930D6A82E43E54300B3BFC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0930D6AF2E43E54300B3BFC6;
+			remoteInfo = Kura;
+		};
+		0930D6CC2E43E54500B3BFC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0930D6A82E43E54300B3BFC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0930D6AF2E43E54300B3BFC6;
+			remoteInfo = Kura;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0930D6B02E43E54300B3BFC6 /* Kura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0930D6C12E43E54500B3BFC6 /* KuraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0930D6CB2E43E54500B3BFC6 /* KuraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0930D6D32E43E54500B3BFC6 /* Exceptions for "Kura" folder in "Kura" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0930D6AF2E43E54300B3BFC6 /* Kura */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0930D6B22E43E54300B3BFC6 /* Kura */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0930D6D32E43E54500B3BFC6 /* Exceptions for "Kura" folder in "Kura" target */,
+			);
+			path = Kura;
+			sourceTree = "<group>";
+		};
+		0930D6C42E43E54500B3BFC6 /* KuraTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = KuraTests;
+			sourceTree = "<group>";
+		};
+		0930D6CE2E43E54500B3BFC6 /* KuraUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = KuraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0930D6AD2E43E54300B3BFC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0930D6BE2E43E54500B3BFC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0930D6C82E43E54500B3BFC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0930D6A72E43E54300B3BFC6 = {
+			isa = PBXGroup;
+			children = (
+				0930D6B22E43E54300B3BFC6 /* Kura */,
+				0930D6C42E43E54500B3BFC6 /* KuraTests */,
+				0930D6CE2E43E54500B3BFC6 /* KuraUITests */,
+				0930D6B12E43E54300B3BFC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0930D6B12E43E54300B3BFC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0930D6B02E43E54300B3BFC6 /* Kura.app */,
+				0930D6C12E43E54500B3BFC6 /* KuraTests.xctest */,
+				0930D6CB2E43E54500B3BFC6 /* KuraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0930D6AF2E43E54300B3BFC6 /* Kura */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0930D6D42E43E54500B3BFC6 /* Build configuration list for PBXNativeTarget "Kura" */;
+			buildPhases = (
+				0930D6AC2E43E54300B3BFC6 /* Sources */,
+				0930D6AD2E43E54300B3BFC6 /* Frameworks */,
+				0930D6AE2E43E54300B3BFC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0930D6B22E43E54300B3BFC6 /* Kura */,
+			);
+			name = Kura;
+			packageProductDependencies = (
+			);
+			productName = Kura;
+			productReference = 0930D6B02E43E54300B3BFC6 /* Kura.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0930D6C02E43E54500B3BFC6 /* KuraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0930D6D92E43E54500B3BFC6 /* Build configuration list for PBXNativeTarget "KuraTests" */;
+			buildPhases = (
+				0930D6BD2E43E54500B3BFC6 /* Sources */,
+				0930D6BE2E43E54500B3BFC6 /* Frameworks */,
+				0930D6BF2E43E54500B3BFC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0930D6C32E43E54500B3BFC6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0930D6C42E43E54500B3BFC6 /* KuraTests */,
+			);
+			name = KuraTests;
+			packageProductDependencies = (
+			);
+			productName = KuraTests;
+			productReference = 0930D6C12E43E54500B3BFC6 /* KuraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0930D6CA2E43E54500B3BFC6 /* KuraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0930D6DC2E43E54500B3BFC6 /* Build configuration list for PBXNativeTarget "KuraUITests" */;
+			buildPhases = (
+				0930D6C72E43E54500B3BFC6 /* Sources */,
+				0930D6C82E43E54500B3BFC6 /* Frameworks */,
+				0930D6C92E43E54500B3BFC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0930D6CD2E43E54500B3BFC6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0930D6CE2E43E54500B3BFC6 /* KuraUITests */,
+			);
+			name = KuraUITests;
+			packageProductDependencies = (
+			);
+			productName = KuraUITests;
+			productReference = 0930D6CB2E43E54500B3BFC6 /* KuraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0930D6A82E43E54300B3BFC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					0930D6AF2E43E54300B3BFC6 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					0930D6C02E43E54500B3BFC6 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 0930D6AF2E43E54300B3BFC6;
+					};
+					0930D6CA2E43E54500B3BFC6 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 0930D6AF2E43E54300B3BFC6;
+					};
+				};
+			};
+			buildConfigurationList = 0930D6AB2E43E54300B3BFC6 /* Build configuration list for PBXProject "Kura" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0930D6A72E43E54300B3BFC6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0930D6B12E43E54300B3BFC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0930D6AF2E43E54300B3BFC6 /* Kura */,
+				0930D6C02E43E54500B3BFC6 /* KuraTests */,
+				0930D6CA2E43E54500B3BFC6 /* KuraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0930D6AE2E43E54300B3BFC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0930D6BF2E43E54500B3BFC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0930D6C92E43E54500B3BFC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0930D6AC2E43E54300B3BFC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0930D6BD2E43E54500B3BFC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0930D6C72E43E54500B3BFC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0930D6C32E43E54500B3BFC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0930D6AF2E43E54300B3BFC6 /* Kura */;
+			targetProxy = 0930D6C22E43E54500B3BFC6 /* PBXContainerItemProxy */;
+		};
+		0930D6CD2E43E54500B3BFC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0930D6AF2E43E54300B3BFC6 /* Kura */;
+			targetProxy = 0930D6CC2E43E54500B3BFC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0930D6D52E43E54500B3BFC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kura/Kura.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6MP9LDJ552;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kura/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.notrai.Kura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0930D6D62E43E54500B3BFC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Kura/Kura.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6MP9LDJ552;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kura/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.notrai.Kura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0930D6D72E43E54500B3BFC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3645L83AKB;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0930D6D82E43E54500B3BFC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3645L83AKB;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0930D6DA2E43E54500B3BFC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3645L83AKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.notrai.KuraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kura.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kura";
+			};
+			name = Debug;
+		};
+		0930D6DB2E43E54500B3BFC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3645L83AKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.notrai.KuraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kura.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kura";
+			};
+			name = Release;
+		};
+		0930D6DD2E43E54500B3BFC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3645L83AKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.notrai.KuraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kura;
+			};
+			name = Debug;
+		};
+		0930D6DE2E43E54500B3BFC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3645L83AKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.notrai.KuraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kura;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0930D6AB2E43E54300B3BFC6 /* Build configuration list for PBXProject "Kura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0930D6D72E43E54500B3BFC6 /* Debug */,
+				0930D6D82E43E54500B3BFC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0930D6D42E43E54500B3BFC6 /* Build configuration list for PBXNativeTarget "Kura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0930D6D52E43E54500B3BFC6 /* Debug */,
+				0930D6D62E43E54500B3BFC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0930D6D92E43E54500B3BFC6 /* Build configuration list for PBXNativeTarget "KuraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0930D6DA2E43E54500B3BFC6 /* Debug */,
+				0930D6DB2E43E54500B3BFC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0930D6DC2E43E54500B3BFC6 /* Build configuration list for PBXNativeTarget "KuraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0930D6DD2E43E54500B3BFC6 /* Debug */,
+				0930D6DE2E43E54500B3BFC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0930D6A82E43E54300B3BFC6 /* Project object */;
+}
