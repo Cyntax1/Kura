@@ -224,10 +224,12 @@ struct WeeklyInsightsView: View {
         let avgCarbs = weekEntries.isEmpty ? 0.0 : weekEntries.reduce(0.0) { $0 + $1.carbs } / 7.0
         let avgFat = weekEntries.isEmpty ? 0.0 : weekEntries.reduce(0.0) { $0 + $1.fat } / 7.0
         
-        let daysWithEntries = Set(weekEntries.map { calendar.startOfDay(for: $0.timestamp) }).count
         let profile = userProfiles.first
-        let daysOverGoal = weekEntries.filter { entry in
-            let dayEntries = weekEntries.filter { calendar.isDate($0.timestamp, inSameDayAs: entry.timestamp) }
+        let dailyTotals = Dictionary(grouping: weekEntries) { entry in
+            calendar.startOfDay(for: entry.timestamp)
+        }
+        let daysWithEntries = dailyTotals.count
+        let daysOverGoal = dailyTotals.values.filter { dayEntries in
             let dayTotal = dayEntries.reduce(0) { $0 + $1.calories }
             return dayTotal > (profile?.dailyCalorieGoal ?? 2000)
         }.count

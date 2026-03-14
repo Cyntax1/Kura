@@ -18,25 +18,18 @@ struct ContentView: View {
             if hasCompletedOnboarding {
                 MainTabView()
                     .onAppear {
-                        print("✅ Showing MainTabView - Onboarding completed")
                         // Configure services with model context
                         UserPreferencesService.shared.configure(with: modelContext)
                         AchievementService.shared.configure(with: modelContext)
                     }
             } else {
                 OnboardingView()
-                    .onAppear {
-                        print("🎓 Showing OnboardingView - hasCompletedOnboarding: \(hasCompletedOnboarding)")
-                    }
             }
-        }
-        .onChange(of: hasCompletedOnboarding) { oldValue, newValue in
-            print("🔄 hasCompletedOnboarding changed: \(oldValue) -> \(newValue)")
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: [UserProfile.self, FastingSession.self, FoodEntry.self, DietPlan.self, StreakData.self, UserPreferences.self, Achievement.self, ChatMessage.self], inMemory: true)
 }

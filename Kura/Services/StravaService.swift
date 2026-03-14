@@ -15,10 +15,11 @@ class StravaService: ObservableObject {
     @Published var athlete: StravaAthlete?
     @Published var recentActivities: [StravaActivity] = []
     
-    // Strava API Configuration
-    private let clientID = "182251"
-    private let clientSecret = "656b3683c9b6a79143c6f2038647369af17e71e8"
-    private let redirectURI = "http://localhost" // Strava-approved redirect for mobile apps
+    // Configure your Strava API credentials at https://www.strava.com/settings/api
+    // Replace these with your actual Strava app credentials
+    private let clientID = "YOUR_STRAVA_CLIENT_ID"
+    private let clientSecret = "YOUR_STRAVA_CLIENT_SECRET"
+    private let redirectURI = "kura://strava/callback" // Must match your Strava app's authorization callback domain
     
     // Token storage
     private var accessToken: String? {
@@ -62,7 +63,9 @@ class StravaService: ObservableObject {
     }
     
     func handleAuthorizationCallback(code: String) async throws {
-        let url = URL(string: "https://www.strava.com/oauth/token")!
+        guard let url = URL(string: "https://www.strava.com/oauth/token") else {
+            throw StravaError.invalidResponse
+        }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -116,11 +119,13 @@ class StravaService: ObservableObject {
             return
         }
         
-        let url = URL(string: "https://www.strava.com/oauth/token")!
+        guard let url = URL(string: "https://www.strava.com/oauth/token") else {
+            throw StravaError.invalidResponse
+        }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+
         let body: [String: Any] = [
             "client_id": clientID,
             "client_secret": clientSecret,
@@ -149,13 +154,17 @@ class StravaService: ObservableObject {
             throw StravaError.notAuthenticated
         }
         
-        var components = URLComponents(string: "https://www.strava.com/api/v3/athlete/activities")!
+        guard var components = URLComponents(string: "https://www.strava.com/api/v3/athlete/activities") else {
+            throw StravaError.invalidResponse
+        }
         components.queryItems = [
             URLQueryItem(name: "page", value: "\(page)"),
             URLQueryItem(name: "per_page", value: "\(perPage)")
         ]
-        
-        var request = URLRequest(url: components.url!)
+        guard let requestURL = components.url else {
+            throw StravaError.invalidResponse
+        }
+        var request = URLRequest(url: requestURL)
         request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         
         let (data, _) = try await URLSession.shared.data(for: request)

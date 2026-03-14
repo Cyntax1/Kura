@@ -50,14 +50,11 @@ struct NativeCameraView: View {
         }
         .sheet(isPresented: $showingCamera) {
             AppleImagePicker { image in
-                print("📸 Received image in callback, updating state...")
                 // Small delay to ensure sheet dismissal completes
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    print("✅ Updating camera state with image")
                     capturedImage = image
                     showingCamera = false
                     flowState = .preview
-                    print("✅ State updated - moving to preview")
                 }
             }
         }
@@ -373,42 +370,26 @@ struct NativeCameraView: View {
     
     private func analyzePhoto() {
         guard let image = capturedImage else {
-            print("❌ No image to analyze")
             flowState = .initial
             return
         }
-        
-        print("🚀 Starting food analysis")
-        print("🔑 API Key configured: \(APIConfig.isConfigured ? "YES" : "NO")")
-        print("🤖 Using model: \(APIConfig.visionModel)")
-        
+
         Task {
             do {
-                print("🧠 Sending image to KuraAi...")
                 let foods = try await aiService.recognizeFood(from: image)
-                
-                print("✅ KurAi recognized \(foods.count) food(s)")
-                for food in foods {
-                    print("  🍽️ \(food.name): \(food.nutrition.calories) cal, P:\(Int(food.nutrition.protein))g, C:\(Int(food.nutrition.carbs))g, F:\(Int(food.nutrition.fat))g")
-                }
-                
+
                 await MainActor.run {
                     recognizedFoods = foods
                     flowState = .results
-                    
+
                     if foods.isEmpty {
-                        print("⚠️ No foods recognized")
                         errorMessage = "KuraAi couldn't identify any food in this image. Try taking another photo with better lighting."
                         showingError = true
                         flowState = .preview
-                    } else {
-                        let totalCalories = foods.reduce(0) { $0 + $1.nutrition.calories }
-                        print("✅ SUCCESS! Total: \(totalCalories) calories")
                     }
                 }
             } catch {
                 await MainActor.run {
-                    print("❌ Analysis failed: \(error.localizedDescription)")
                     errorMessage = "Analysis Error: \(error.localizedDescription)\n\nAPI Key: \(APIConfig.isConfigured ? "Configured" : "Missing")"
                     showingError = true
                     flowState = .preview
@@ -418,8 +399,6 @@ struct NativeCameraView: View {
     }
     
     private func addFoodEntry(_ food: RecognizedFoodItem) {
-        print("💾 Saving: \(food.name) - \(food.nutrition.calories) cal, P:\(Int(food.nutrition.protein))g, C:\(Int(food.nutrition.carbs))g, F:\(Int(food.nutrition.fat))g")
-        
         do {
             let foodEntry = FoodEntry(
                 name: food.name,
@@ -440,13 +419,10 @@ struct NativeCameraView: View {
             
             modelContext.insert(foodEntry)
             try modelContext.save()
-            
-            print("✅ Added \(food.name) to \(selectedMealType.rawValue)!")
-            
+
             recognizedFoods.removeAll { $0.id == food.id }
-            
+
             if recognizedFoods.isEmpty {
-                print("✅ All foods added to diet, closing camera")
                 dismiss()
             }
         } catch {
@@ -639,24 +615,18 @@ struct AppleImagePicker: UIViewControllerRepresentable {
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            print("📸 Camera captured image")
-            
             // Dismiss picker first
             picker.dismiss(animated: true) {
                 // Then handle the image on main thread after dismissal
                 if let image = info[.originalImage] as? UIImage {
-                    print("✅ Image extracted, dispatching to main thread")
                     DispatchQueue.main.async {
                         self.parent.onImageSelected(image)
                     }
-                } else {
-                    print("❌ Failed to extract image from picker")
                 }
             }
         }
-        
+
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            print("❌ Camera cancelled")
             picker.dismiss(animated: true)
         }
     }
@@ -709,7 +679,7 @@ struct NativeFoodCard: View {
                     .cornerRadius(6)
             }
             
-            Button("Add to \(food.name)") {
+            Button("Add to Meal") {
                 onAdd()
             }
             .frame(maxWidth: .infinity)

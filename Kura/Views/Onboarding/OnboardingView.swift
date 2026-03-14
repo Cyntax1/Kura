@@ -78,10 +78,6 @@ struct OnboardingView: View {
                         
                         if currentStep < 6 {
                             Button("Next") {
-                                print("Next button tapped, current step: \(currentStep)")
-                                print("Can proceed: \(canProceed)")
-                                print("Name: '\(onboardingData.name)'")
-                                print("Age: \(onboardingData.age)")
                                 withAnimation {
                                     currentStep += 1
                                 }
@@ -113,13 +109,10 @@ struct OnboardingView: View {
     }
     
     private func completeOnboarding() {
-        print("🎉 Starting onboarding completion...")
-        
         // Create user preferences based on onboarding selection
         let preferences = UserPreferences(unitSystem: onboardingData.useImperial ? .imperial : .metric)
         modelContext.insert(preferences)
-        print("✅ Created user preferences")
-        
+
         // Create user profile
         let profile = UserProfile(
             name: onboardingData.name,
@@ -141,8 +134,7 @@ struct OnboardingView: View {
         }
         
         modelContext.insert(profile)
-        print("✅ Created user profile: \(profile.name)")
-        
+
         // Create initial streak data
         let fastingStreak = StreakData(type: .fasting)
         let dietingStreak = StreakData(type: .dieting)
@@ -156,15 +148,12 @@ struct OnboardingView: View {
         
         do {
             try modelContext.save()
-            print("✅ Saved all data to SwiftData")
         } catch {
             print("❌ Error saving to SwiftData: \(error)")
         }
-        
+
         // Mark onboarding as complete - @AppStorage in ContentView will auto-update
         UserDefaults.standard.set(true, forKey: "hasCompletedOnboarding")
-        print("✅ Set hasCompletedOnboarding = true")
-        print("🎉 Onboarding complete! Navigating to main app...")
     }
 }
 

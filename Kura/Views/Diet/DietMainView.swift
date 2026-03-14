@@ -463,8 +463,6 @@ struct DietMainView: View {
         guard let goal = activeDietPlan?.dailyCalorieGoal else { return 0 }
         
         let calendar = Calendar.current
-        let _ = calendar.date(byAdding: .day, value: -7, to: Date()) ?? Date()
-        
         var daysWithGoalMet = 0
         for i in 0..<7 {
             let day = calendar.date(byAdding: .day, value: -i, to: Date()) ?? Date()

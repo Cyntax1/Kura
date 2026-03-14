@@ -110,22 +110,30 @@ class AchievementService {
     
     private func calculateCurrentStreak(sessions: [FastingSession]) -> Int {
         guard !sessions.isEmpty else { return 0 }
-        
+
         let calendar = Calendar.current
         var streak = 0
-        var currentDate = calendar.startOfDay(for: Date())
-        
+        var expectedDate = calendar.startOfDay(for: Date())
+        var lastSeenDate: Date? = nil
+
         for session in sessions {
             let sessionDate = calendar.startOfDay(for: session.startTime)
-            
-            if calendar.dateInterval(of: .day, for: sessionDate)?.contains(currentDate) == true {
+
+            // Skip sessions already counted for this day (sessions are sorted descending)
+            if sessionDate == lastSeenDate {
+                continue
+            }
+
+            if sessionDate == expectedDate {
                 streak += 1
-                currentDate = calendar.date(byAdding: .day, value: -1, to: currentDate) ?? currentDate
-            } else if sessionDate < currentDate {
+                lastSeenDate = sessionDate
+                expectedDate = calendar.date(byAdding: .day, value: -1, to: expectedDate) ?? expectedDate
+            } else if sessionDate < expectedDate {
+                // Gap in streak - stop counting
                 break
             }
         }
-        
+
         return streak
     }
     

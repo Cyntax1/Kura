@@ -11,7 +11,7 @@ struct APIConfig {
     
     // Configuration validation - only checks OpenAI
     static var isConfigured: Bool {
-        return !openAIAPIKey.isEmpty && !openAIAPIKey.contains("your-")
+        return !openAIAPIKey.isEmpty && openAIAPIKey != "YOUR_OPENAI_API_KEY" && !openAIAPIKey.hasPrefix("YOUR_")
     }
     
     // API endpoints - only OpenAI
